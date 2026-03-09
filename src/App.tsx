@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/global.css";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Landing from "./pages/landing";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import Privacy from "./pages/privacy";
-import Terms from "./pages/terms";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Landing from "./pages/Landing";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function App() {
   return (
