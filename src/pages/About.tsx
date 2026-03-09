@@ -9,6 +9,7 @@ import Privacy from "../assets/Images/Privacy.png";
 import Independent from "../assets/Images/Independent.png";
 import Frame from "../assets/Images/Frame.png";
 const About = () => {
+    
     const features = [
         {
             id: 1,
