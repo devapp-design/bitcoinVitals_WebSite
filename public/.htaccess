@@ -1,9 +1,15 @@
-# SPA routing: serve index.html for all routes so React Router works
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+
+  # If the requested file exists, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Otherwise send all requests to index.html
+  RewriteRule ^ index.html [L]
 </IfModule>
+
+# Optional: prevent directory listing
+Options -Indexes
