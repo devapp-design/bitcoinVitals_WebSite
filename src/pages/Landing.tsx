@@ -1,14 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import AppStoreIcon from "../assets/Images/AppStoreIcon.png";
 import PlayStoreIcon from "../assets/Images/PlayStoreIcon.png";
-import Frame from "../assets/Images/Frame.png";
-import SingleFrame from "../assets/Images/SingleFrame.png";
+import BitcoinVitalsDisplay from "../assets/Images/BitcoinVitalsDisplay.png";
+import BitcoinVitalsHomeDisplay from "../assets/Images/BitcoinVitalsHomeDisplay.png";
 import LongTermIcon from "../assets/Images/BuiltForLongTerm.png"
 import MacroPerspective from "../assets/Images/MacroPerspective.png"
 import OnChainIcon from "../assets/Images/OnChainIcon.png"
 import PrivacyByDesign from "../assets/Images/PrivacyByDesign.png"
 import TrackIcon from "../assets/Images/TrackIcon.png"
 import NetworkIntelligence from "../assets/Images/NetworkIntelligence.png"
+
+const APP_STORE_URL = "https://apps.apple.com/us/app/bitcoin-vitals/id6762464023";
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.bitcoinvitals.app";
 
 // ─── Scoped styles for features + CTA sections ───────────────────────────────
 const sectionCss = `
@@ -415,11 +418,11 @@ function CTASection() {
           and make your own informed decisions over time.
         </p>
         <div className="cta-store-buttons">
-          <a href="#" className="store-btn">
+          <a href={APP_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer">
             <img src={AppStoreIcon} alt="Download on the App Store" />
           </a>
-          <a href="#" className="store-btn">
-            <img src={PlayStoreIcon} alt="Download on the App Store" />
+          <a href={PLAY_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer">
+            <img src={PlayStoreIcon} alt="Get it on Google Play" />
             
           </a>
         </div>
@@ -436,26 +439,25 @@ const Landing = () => {
     <div>
       <style>{sectionCss}</style>
 
-      {/* ── Hero (unchanged) ── */}
+      {/* ── Hero ── */}
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-image">
-            <img src={Frame} alt="App Preview" className="phone-mock" />
+            <img src={BitcoinVitalsDisplay} alt="Bitcoin Vitals app screens" className="phone-mock" />
           </div>
 
-          <div>
-            <h1 style={{ fontSize: 40 }}>Bitcoin Vitals</h1>
-            <p style={{ fontSize: 20, fontWeight: "bold" }}>Bitcoin-only analytics for clarity, not noise.</p>
+          <div className="hero-copy">
+            <div className="hero-brand-mark" aria-hidden="true">₿</div>
+            <h1>Bitcoin Vitals</h1>
+            <p className="hero-subtitle">Bitcoin-only analytics for clarity, not noise</p>
 
             <div className="store-buttons">
-              <a href="#" className="store-btn"><img src={AppStoreIcon} alt="Download on the App Store" /></a>
-              <a href="#" className="store-btn"><img src={PlayStoreIcon} alt="Get it on Google Play" /></a>
+              <a href={APP_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer"><img src={AppStoreIcon} alt="Download on the App Store" /></a>
+              <a href={PLAY_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer"><img src={PlayStoreIcon} alt="Get it on Google Play" /></a>
             </div>
 
             <p className="hero-desc">
-              Track your holdings, verify on-chain activity,
-              and monitor network health — without accounts,
-              ads, or data harvesting.
+            Bitcoin Vitals helps you understand Bitcoin from first principles. Track your holdings, verify on-chain activity, and monitor the health of the network, without accounts, ads, or data harvesting.
             </p>
           </div>
         </div>
@@ -474,10 +476,10 @@ const Landing = () => {
                 ))}
               </ul>
             </div>
-            <div className="lp-features-right" style={{marginTop: "-10%"}}>
+            <div className="lp-features-right" style={{marginTop: "-40%"}}>
               <img
-                src={SingleFrame}
-                alt="App mockup"
+                src={BitcoinVitalsHomeDisplay}
+                alt="Bitcoin Vitals home screen"
                 className="lp-features-mockup"
               />
             </div>

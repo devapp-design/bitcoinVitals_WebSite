@@ -8,6 +8,10 @@ import NetworkHealthVisiblity from "../assets/Images/NetworkHealthVisiblity.png"
 import Privacy from "../assets/Images/Privacy.png";
 import Independent from "../assets/Images/Independent.png";
 import Frame from "../assets/Images/Frame.png";
+
+const APP_STORE_URL = "https://apps.apple.com/us/app/bitcoin-vitals/id6762464023";
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.bitcoinvitals.app";
+
 const About = () => {
     
     const features = [
@@ -172,8 +176,8 @@ const About = () => {
                     </p>
                 </div>
                 <div className="store-buttons">
-                    <a href="#" className="store-btn"><img src={AppStoreIcon} alt="Download on the App Store" /></a>
-                    <a href="#" className="store-btn"><img src={PlayStoreIcon} alt="Get it on Google Play" /></a>
+                    <a href={APP_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer"><img src={AppStoreIcon} alt="Download on the App Store" /></a>
+                    <a href={PLAY_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer"><img src={PlayStoreIcon} alt="Get it on Google Play" /></a>
                 </div>
 
                 {WhyBitcoinVitals()}
@@ -189,8 +193,8 @@ const About = () => {
                         <p style={{ fontSize: 20, fontWeight: "bold" }}>Bitcoin-only analytics for clarity, not noise.</p>
 
                         <div className="store-buttons">
-                            <a href="#" className="store-btn"><img src={AppStoreIcon} alt="Download on the App Store" /></a>
-                            <a href="#" className="store-btn"><img src={PlayStoreIcon} alt="Get it on Google Play" /></a>
+                            <a href={APP_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer"><img src={AppStoreIcon} alt="Download on the App Store" /></a>
+                            <a href={PLAY_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer"><img src={PlayStoreIcon} alt="Get it on Google Play" /></a>
                         </div>
 
                         <p className="hero-desc">
