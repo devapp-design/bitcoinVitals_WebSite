@@ -7,7 +7,7 @@ import LongTermModeling from "../assets/Images/LongTermModeling.png";
 import NetworkHealthVisiblity from "../assets/Images/NetworkHealthVisiblity.png";
 import Privacy from "../assets/Images/Privacy.png";
 import Independent from "../assets/Images/Independent.png";
-import Frame from "../assets/Images/Frame.png";
+import BitcoinVitalsDisplay from "../assets/Images/BitcoinVitalsDisplay.png";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/bitcoin-vitals/id6762464023";
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.bitcoinvitals.app";
@@ -185,12 +185,13 @@ const About = () => {
             <section className="hero">
                 <div className="container hero-grid">
                     <div className="hero-image">
-                        <img src={Frame} alt="App Preview" className="phone-mock" />
+                        <img src={BitcoinVitalsDisplay} alt="Bitcoin Vitals app screens" className="phone-mock" />
                     </div>
 
-                    <div>
-                        <h1 style={{ fontSize: 40 }}>Bitcoin Vitals</h1>
-                        <p style={{ fontSize: 20, fontWeight: "bold" }}>Bitcoin-only analytics for clarity, not noise.</p>
+                    <div className="hero-copy">
+                        <div className="hero-brand-mark" aria-hidden="true">₿</div>
+                        <h1>Bitcoin Vitals</h1>
+                        <p className="hero-subtitle">Bitcoin-only analytics for clarity, not noise</p>
 
                         <div className="store-buttons">
                             <a href={APP_STORE_URL} className="store-btn" target="_blank" rel="noopener noreferrer"><img src={AppStoreIcon} alt="Download on the App Store" /></a>
@@ -198,9 +199,7 @@ const About = () => {
                         </div>
 
                         <p className="hero-desc">
-                            Track your holdings, verify on-chain activity,
-                            and monitor network health — without accounts,
-                            ads, or data harvesting.
+                        Bitcoin Vitals helps you understand Bitcoin from first principles. Track your holdings, verify on-chain activity, and monitor the health of the network, without accounts, ads, or data harvesting.
                         </p>
                     </div>
                 </div>
