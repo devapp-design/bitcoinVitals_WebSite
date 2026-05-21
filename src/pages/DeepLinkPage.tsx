@@ -46,7 +46,7 @@ export default function DeepLinkPage({ label, value }: DeepLinkPageProps) {
       }}
     >
       <div style={{ maxWidth: 520, textAlign: "center" }}>
-        <h1>Opening Bitcoin Vitals...</h1>
+        <h1>Opening Bitcoin Vitals</h1>
         <p style={{ color: "#888", lineHeight: 1.6, marginTop: 12 }}>
           If the app is installed, this link should open it automatically. Otherwise, we
           will send you to the app store.
