@@ -9,7 +9,9 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="container nav-content">
                 <div className="logo">
-                    <img src={NavBarLogo} alt="Bitcoin Vitals" width={200} height={33} />
+                    <Link to="/" onClick={() => setMenuOpen(false)} aria-label="Go to home">
+                        <img src={NavBarLogo} alt="Bitcoin Vitals" width={200} height={33} />
+                    </Link>
                 </div>
 
                 <button
