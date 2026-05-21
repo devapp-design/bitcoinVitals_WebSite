@@ -2,12 +2,16 @@ import { Link } from "react-router-dom";
 import FooterLogo from "../assets/Images/FooterLogo.png";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
+
 const Footer = () => {
+
     return (
         <footer className="footer">
             <div className="container footer-grid">
                 <div>
+                    <Link to="/" aria-label="Go to home">
                     <img src={FooterLogo} alt="Bitcoin Vitals" width={152} height={125} />
+                    </Link>
                 </div>
 
                 <div>
