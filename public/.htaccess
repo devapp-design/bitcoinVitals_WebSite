@@ -1,15 +1,12 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /
 
-  # If the requested file exists, serve it directly
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+  # Allow .well-known files
+  RewriteRule ^\.well-known/ - [L]
 
-  # Otherwise send all requests to index.html
-  RewriteRule ^ index.html [L]
+  # React/Vite SPA routing
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  RewriteRule . /index.html [L]
 </IfModule>
-
-# Optional: prevent directory listing
-Options -Indexes
