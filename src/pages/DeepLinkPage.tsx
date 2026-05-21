@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/bitcoin-vitals/id6762464023";
+const APP_STORE_DEEP_LINK_URL = "itms-apps://itunes.apple.com/app/id6762464023";
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.bitcoinvitals.app";
-const STORE_REDIRECT_DELAY_MS = 1500;
 
 type DeepLinkPageProps = {
   label: string;
@@ -17,7 +17,7 @@ function getMobileStoreUrl() {
   }
 
   if (/iphone|ipad|ipod/.test(ua)) {
-    return APP_STORE_URL;
+    return APP_STORE_DEEP_LINK_URL;
   }
 
   return null;
@@ -27,15 +27,9 @@ export default function DeepLinkPage({ label, value }: DeepLinkPageProps) {
   useEffect(() => {
     const storeUrl = getMobileStoreUrl();
 
-    if (!storeUrl) {
-      return;
+    if (storeUrl) {
+      window.location.replace(storeUrl);
     }
-
-    const timer = window.setTimeout(() => {
-      window.location.href = storeUrl;
-    }, STORE_REDIRECT_DELAY_MS);
-
-    return () => window.clearTimeout(timer);
   }, []);
 
   return (
@@ -54,8 +48,8 @@ export default function DeepLinkPage({ label, value }: DeepLinkPageProps) {
       <div style={{ maxWidth: 520, textAlign: "center" }}>
         <h1>Opening Bitcoin Vitals...</h1>
         <p style={{ color: "#888", lineHeight: 1.6, marginTop: 12 }}>
-          If the app is installed, this link should open it automatically.
-          Otherwise, you can install Bitcoin Vitals from the app store.
+          If the app is installed, this link should open it automatically. Otherwise, we
+          will send you to the app store.
         </p>
 
         <p style={{ color: "#888", marginTop: 24 }}>{label}:</p>
