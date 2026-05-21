@@ -1,14 +1,9 @@
 [
   {
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ],
-
+    "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-
       "package_name": "com.bitcoinvitals.app",
-
       "sha256_cert_fingerprints": [
         "E7:7B:FD:08:73:66:33:37:70:66:72:35:87:E1:AB:48:13:FA:31:C3:43:47:17:C3:42:7E:58:BD:B4:42:64:64"
       ]
