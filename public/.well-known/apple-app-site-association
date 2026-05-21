@@ -1,0 +1,23 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "YJJUWZ39UA.com.bitcoinvitals.app"
+        ],
+
+        "components": [
+          {
+            "/": "/address/*"
+          },
+          {
+            "/": "/tx/*"
+          },
+          {
+            "/": "/block/*"
+          }
+        ]
+      }
+    ]
+  }
+}
