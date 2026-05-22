@@ -10,3 +10,13 @@
 
   RewriteRule . /index.html [L]
 </IfModule>
+
+<IfModule mod_mime.c>
+  <Files "apple-app-site-association">
+    ForceType application/json
+  </Files>
+
+  <Files "assetlinks.json">
+    ForceType application/json
+  </Files>
+</IfModule>
